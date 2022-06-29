@@ -269,29 +269,18 @@
              </div>
           </div>
        </div>
+     
        <div class="row d_flex">
+        @foreach ($doctors as $row )
           <div class=" col-md-4">
                 <div id="ho_efcet" class="reader text_align_center">
                    <i>
-                       <img src="{{asset('assets/images/doc1.png')}}" alt="#"/></i>
-                   <h3>DR.Moamen Mostafa <br>
+                       <img src="{{$row['image']}}" alt="#"/></i>
+                   <h3>{{$row['name']}} <br>
                      Pulmonologist</h3>
                 </div>
              </div>
-             <div class=" col-md-4">
-                <div id="ho_efcet" class="reader text_align_center">
-                    <i>
-                        <img src="{{asset('assets/images/doc2.png')}}" alt="#"/></i>                   <h3>DR.Shahenda hesham<br>
-                     Pulmonologist</h3>
-                </div>
-             </div>
-             <div class=" col-md-4">
-                <div id="ho_efcet" class="reader text_align_center">
-                    <i>
-                        <img src="{{asset('assets/images/doc3.png')}}" alt="#"/></i>                    <h3>Muhammed Ali <br>
-                     Pulmonologist</h3>
-                </div>
-             </div>
+             @endforeach
           </div>
     </div>
  </div>

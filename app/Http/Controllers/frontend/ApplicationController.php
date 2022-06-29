@@ -4,6 +4,7 @@ namespace App\Http\Controllers\frontend;
 
 use App\Banner;
 use App\Brand;
+use App\Doctor;
 use App\Category;
 use App\News;
 use App\Notice;
@@ -22,12 +23,13 @@ class ApplicationController extends FrontendController
         $this->data('bannerData', Banner::all());
         $this->data('brandData', Brand::all());
         $this->data('productData', Product::all());
+        $this->data('doctors', Doctor::all());
         return view($this->pagePath . 'home.home', $this->data);
     }
     public function ct(){
         return redirect('http://127.0.0.1:5000/');
     }
-
+ 
     public function subscribePost(Request $request)
     {
 
