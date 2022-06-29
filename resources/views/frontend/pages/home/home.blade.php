@@ -275,7 +275,7 @@
           <div class=" col-md-4">
                 <div id="ho_efcet" class="reader text_align_center">
                    <i>
-                       <img src="{{asset('assets/backend/uploads/images/doctor/'.$row->image)}}" alt="#"/></i>
+                       <img src="{{asset('backend/uploads/images/doctor/'.$row->image)}}" alt="#"/></i>
                    <h3>{{$row['name']}} <br>
                      Pulmonologist</h3>
                 </div>
