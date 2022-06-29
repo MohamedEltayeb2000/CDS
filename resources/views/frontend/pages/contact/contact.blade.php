@@ -12,13 +12,18 @@
             </div>
         </div>
     </section>
-
+ 
     <section id="aa-contact">
+        
         <div class="container">
+         
             <div class="row">
                 <div class="col-md-12">
-
+                  
                     <div class="aa-contact-area">
+                          <center class="card-header">
+                        <h2>Contact Us</h2>
+                    </center>
                         <div class="aa-contact-address">
                             <div class="row">
                                 <div class="col-md-4">
@@ -65,9 +70,15 @@
                                                 </div>
                                                 <div class="col-md-6">
                                                     <div class="form-group">
-                                                        <input type="text" id="brand" name="brand"
-                                                               placeholder="doctor"
-                                                               class="form-control">
+                                                        <div class="form-group">
+                                                            <select class="custom-select" required>
+                                                              <option value="">Open this select menu</option>
+                                                              <option value="1">One</option>
+                                                              <option value="2">Two</option>
+                                                              <option value="3">Three</option>
+                                                            </select>
+                                                            <div class="invalid-feedback">Example invalid custom select feedback</div>
+                                                          </div>
 
                                                     </div>
                                                 </div>

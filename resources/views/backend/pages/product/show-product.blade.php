@@ -41,7 +41,7 @@
                                             <td>Rs{{$product->price}}</td>
                                             <td>{{$product->mg}} mg</td>
                                             <td>
-                                                <img src="{{url('public/backend/uploads/images/product/'.$product->image)}}" alt="INF" width="50">
+                                                <img src="{{asset('backend/uploads/images/product/'.$product->image)}}" alt="INF" width="50">
                                             </td>
                                             <td>{{$product->description}}</td>
                                             <td>{{$product->man_date}}</td>

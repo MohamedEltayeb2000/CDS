@@ -300,5 +300,5 @@ Route::get("/searchdoctor",[DoctorlistController::class,"searchdoctor"]);
 
 Route::get("/doctorlist",[DoctorlistController::class,"retrievedoctors"]);
 Route::get("/createbooking",[DoctorlistController::class,"createbooking"]);
- Route::any('doctorlist1', 'DoctorlistController@retrievedoctors')->name('retrievedoctors');
- Route::any('doctorlist', 'ApplicationController@retrievedoctors')->name('retrievedoctors');
+ Route::any('doctorlist', 'DoctorlistController@retrievedoctors')->name('retrievedoctors');
+ Route::any('doctorlist1', 'ApplicationController@retrievedoctors')->name('retrievedoctors');

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\frontend;
 use App\Banner;
 use App\Brand;
 use App\Doctor;
+use App\Hospitals;
 use App\Category;
 use App\News;
 use App\Notice;
@@ -24,6 +25,7 @@ class ApplicationController extends FrontendController
         $this->data('brandData', Brand::all());
         $this->data('productData', Product::all());
         $this->data('doctors', Doctor::all());
+      
         return view($this->pagePath . 'home.home', $this->data);
     }
     public function ct(){

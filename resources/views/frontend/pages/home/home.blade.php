@@ -264,8 +264,8 @@
        <div class="row">
           <div class="col-md-12">
              <div class="titlepage text_align_center ">
-               <h2>Meet Our Experts</h2>
-                <h3>Our top dedicated professionals.</h3>
+                <h2 class="darkblue1">Our Doctors</h2>
+                <h3>Meet Our Experts Doctors</h3>
              </div>
           </div>
        </div>
@@ -282,6 +282,7 @@
              </div>
              @endforeach
           </div>
+          
     </div>
  </div>
     <!-- Products section -->
