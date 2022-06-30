@@ -1,98 +1,76 @@
 @extends('frontend.master.master')
 
 @section('content')
+<div class="container">
     <div class="col-md-12">
         <div class="container app">
             <div class="row app-one">
                 <div class="col-sm-4 side">
                     <div class="side-one">
                         <div class="row heading">
-                            <div class="col-sm-3 col-xs-3 heading-avatar">
+                            <div class="col-md-3 col-xs-3 heading-avatar">
                                 <div class="heading-avatar-icon">
                                     <img src="{{asset('assets/backend/uploads/images/user/'.Auth::guard('web')->user()->image)}}">
-                                    <a href="">{{Auth::guard('web')->user()->name}}</a>
                                 </div>
+
+                                <br>
                             </div>
-                            <div class="col-sm-1 col-xs-1  heading-dot  pull-right">
-                                <i class="fa fa-ellipsis-v fa-2x  pull-right" aria-hidden="true"></i>
+                            <div class="col-md-9  ">
+                                <h3 class="card-header" href="">  :- {{Auth::guard('web')->user()->name}}</h3>
                             </div>
-                            <div class="col-sm-2 col-xs-2 heading-compose  pull-right">
-                                <i class="fa fa-comments fa-2x  pull-right" aria-hidden="true"></i>
-                            </div>
+                         
                         </div>
 
-                        <div class="row searchBox">
-                            <div class="col-sm-12 searchBox-inner">
-                                <div class="form-group has-feedback">
-                                    <input id="searchText" type="text" class="form-control" name="searchText"
-                                           placeholder="Search">
-                                    <span class="glyphicon glyphicon-search form-control-feedback"></span>
-                                </div>
-                            </div>
-                        </div>
+                      
 
                         <div class="row sideBar">
                             @foreach($doctorData as $doctor)
+                            <div class="col-12 ">
+
                                 <a href="javascript:void(0)" id="receiver_username" class="receiver_username" data-id="{{$doctor->username}}">
-                                    <div class="row sideBar-body">
+                                    <div class="col-12 sideBar-body">
 
                                         <div class="col-sm-3 col-xs-3 sideBar-avatar">
                                             <div class="avatar-icon">
-                                                <img src="{{asset('assets/backend/uploads/images/doctor/'.$doctor->image)}}">
+               
+                                                <img src="{{asset('backend/uploads/images/doctor/'.$doctor->image)}}">
                                             </div>
                                         </div>
                                         <div class="col-sm-9 col-xs-9 sideBar-main">
                                             <div class="row">
-                                                <div class="col-sm-8 col-xs-8 sideBar-name">
-                                            <span class="name-meta">{{$doctor->username}}
+                                                <div class="sideBar-name">
+                                            <span class="name-meta">
+                                                {{$doctor->name}}
                                              </span>
                                                 </div>
-                                                <div class="col-sm-4 col-xs-4 pull-right sideBar-time">
-                                             <span class="time-meta pull-right">18:18
-                                             </span>
-                                                </div>
+                                             
                                             </div>
                                         </div>
                                     </div>
                                 </a>
+                            </div>
                             @endforeach
 
                         </div>
                     </div>
 
                     <div class="side-two">
-                        <div class="row newMessage-heading">
-                            <div class="row newMessage-main">
-                                <div class="col-sm-2 col-xs-2 newMessage-back">
-                                    <i class="fa fa-arrow-left" aria-hidden="true"></i>
-                                </div>
-                                <div class="col-sm-10 col-xs-10 newMessage-title">
-                                    New Chat
-                                </div>
-                            </div>
-                        </div>
 
-                        <div class="row composeBox">
-                            <div class="col-sm-12 composeBox-inner">
-                                <div class="form-group has-feedback">
-                                    <input id="composeText" type="text" class="form-control" name="searchText"
-                                           placeholder="Search People">
-                                    <span class="glyphicon glyphicon-search form-control-feedback"></span>
-                                </div>
-                            </div>
-                        </div>
+
+
 
                         <div class="row compose-sideBar">
                             <div class="row sideBar-body">
                                 <div class="col-sm-3 col-xs-3 sideBar-avatar">
                                     <div class="avatar-icon">
-                                        <img src="https://bootdey.com/img/Content/avatar/avatar1.png">
+                                        <img src="{{asset('backend/uploads/images/doctor/'.$doctor->image)}}">
                                     </div>
+                                    
                                 </div>
                                 <div class="col-sm-9 col-xs-9 sideBar-main">
                                     <div class="row">
-                                        <div class="col-sm-8 col-xs-8 sideBar-name">
-                  <span class="name-meta">John Doe
+                                        <div class=" col-xs-8 sideBar-name">
+                  <span class="name-meta">Mohamed ALi 
                 </span>
                                         </div>
                                         <div class="col-sm-4 col-xs-4 pull-right sideBar-time">
@@ -108,7 +86,7 @@
                     </div>
                 </div>
 
-                <div class="col-sm-8 conversation" style="display: none;">
+                <div class="col-sm-8 conversation" >
                     <div class="row heading">
                         <div class="col-sm-2 col-md-1 col-xs-3 heading-avatar">
                             <div class="heading-avatar-icon">
@@ -123,30 +101,21 @@
                         </div>
                     </div>
 
-                    <div class="row message" id="conversation">
-
-
-                    </div>
-
                     <div class="row reply">
-                        <div class="col-sm-1 col-xs-1 reply-emojis">
-                            <i class="fa fa-smile-o fa-2x"></i>
-                        </div>
+        
                         <div class="col-sm-9 col-xs-9 reply-main">
 
                             <form action="{{route('send-message')}}" id="send_message_cline_all" method="post">
                                 {{csrf_field()}}
                                 <input type="hidden" id="receiver_username">
-                                <textarea name="message" class="form-control col-lg-4" id="message_box"></textarea>
+                                <textarea name="message" class="form-control col-10" id="message_box"></textarea>
+                                <button class="btn btn-success btn-sm"><i class="fa fa-send"></i> Send Messages</button>
 
+                                <div class="form-group form-group-sm float-right">
+                                </div>
                             </form>
                         </div>
-                        <div class="col-sm-1 col-xs-1 reply-recording">
-                            <i class="fa fa-microphone fa-2x" aria-hidden="true"></i>
-                        </div>
-                        <div class="col-sm-1 col-xs-1 reply-send">
-                            <i class="fa fa-send fa-2x" aria-hidden="true"></i>
-                        </div>
+                       
                     </div>
                 </div>
             </div>
@@ -154,5 +123,5 @@
 
 
     </div>
-
+</div>
 @endsection

@@ -31,10 +31,15 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{route('contact')}}">Contact</a>
                     </li>
+                                                <li class="nav-item"><a class="nav-link" href="{{route('all-product')}}">Product</a></li>
+
+                            <li class="nav-item"><a  class="nav-link" href="{{route('live-chat')}}">Live Chat</a></li>
+                            <li class="nav-item"><a class="nav-link"  href="{{route('prescription-upload')}}">Prescription</a></li>
+
 
                   <div class="aa-header-top-right">
                     <ul class="nav navbar-nav my-nav-bar">
-                        <li><a class="btn btn-primary loginbtn"  href="{{route('login')}}"> <i class="fa fa-sign-in ml-2" aria-hidden="true"></i> Login | Register <i class="fa fa-user-plus ml-2" aria-hidden="true"></i> </a></li>
+                        <li><a class="btn btn-primary loginbtn" href="{{route('login')}}"> <i class="fa fa-sign-in ml-2" aria-hidden="true"></i> Login | Register <i class="fa fa-user-plus ml-2" aria-hidden="true"></i> </a></li>
                         @if(Auth::guard('web')->user())
 
                             <li><a>My Account <span class="caret"></span></a>

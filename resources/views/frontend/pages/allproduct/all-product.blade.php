@@ -13,7 +13,7 @@
 
     {{--all product which include all medicine product--}}
     <section id="aa-product-category">
-        <div class="container">
+        <div class="container card">
             <div class="row">
                 <div class="col-lg-9 col-md-9 col-sm-8 col-md-push-3">
                     <div class="aa-product-catg-content">
@@ -25,7 +25,7 @@
                                     <li>
                                         <figure>
                                             <a class="aa-product-img" href="#">
-                                                <img src="{{asset('assets/backend/uploads/images/product/'.$product->image)}}"
+                                                <img src="{{asset('backend/uploads/images/product/'.$product->image)}}"
                                                      class="img-responsive" alt="Image not found"></a>
                                             <a class="aa-add-card-btn" href="{{route('product-details').'/'.$product->id}}">
                                             <span class=""></span>Add To Cart</a>

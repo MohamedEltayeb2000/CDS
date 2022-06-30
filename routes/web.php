@@ -15,8 +15,10 @@ Route::get('ctscan', function () {
 });
 
 
+
 Route::group(['namespace' => 'frontend'], function () {
     Route::any('login', 'UserLoginController@showLoginForm')->name('login');
+  
 
 
 
@@ -24,7 +26,7 @@ Route::group(['namespace' => 'frontend'], function () {
     //----------------------homepage-------------------------------
     Route::any('/', 'ApplicationController@index')->name('index');
     Route::any('ct', 'ApplicationController@ct')->name('ct');
-
+    Route::any('loginas', 'ApplicationController@loginas')->name('loginas');
     Route::any('about-us', 'AboutUsController@aboutUs')->name('about-us');
     Route::any('contact', 'ContactController@contact')->name('contact');
     Route::any('contact-post', 'ContactController@contactPost')->name('contact-post');
@@ -301,4 +303,4 @@ Route::get("/searchdoctor",[DoctorlistController::class,"searchdoctor"]);
 Route::get("/doctorlist",[DoctorlistController::class,"retrievedoctors"]);
 Route::get("/createbooking",[DoctorlistController::class,"createbooking"]);
  Route::any('doctorlist', 'DoctorlistController@retrievedoctors')->name('retrievedoctors');
- Route::any('doctorlist1', 'ApplicationController@retrievedoctors')->name('retrievedoctors');
+ Route::any('doctorlist1', 'ApplicationController@retrievedoctors')->name('doctorlist1');

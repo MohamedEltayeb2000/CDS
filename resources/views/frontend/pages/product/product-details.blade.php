@@ -13,8 +13,8 @@
                                     <div class="aa-product-view-slider">
                                         <div id="demo-1" class="simpleLens-gallery-container">
                                             <div class="simpleLens-container">
-                                                <div>
-                                                    <img src="{{asset('backend/uploads/images/product/'.$productDetails->image)}}"
+                                                <div>          
+                                                    <img src="{{asset('assets/backend/uploads/images/product/'.$productDetails->image)}}"
                                                          class="simpleLens-lens-image"></div>
                                             </div>
                                         </div>
