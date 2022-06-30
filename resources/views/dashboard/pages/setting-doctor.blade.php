@@ -52,7 +52,7 @@
                                         </form>
                                     </div>
                                     <div class="col-md-4">
-                                        <img src="{{url('public/backend/uploads/images/doctor/'.$doctorData->image)}}"
+                                        <img src="{{asset('backend/uploads/images/doctor/'.$doctorData->image)}}"
                                              id="target_image" alt="image not found" class="img-responsive thumbnail">
                                     </div>
                                 </div>

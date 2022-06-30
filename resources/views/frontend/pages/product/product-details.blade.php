@@ -3,8 +3,8 @@
     <section id="aa-product-details">
         <div class="container">
             <div class="row">
-                <div class="col-md-12">
-                    <div class="aa-product-details-area">
+                <div class="col-md-12 card">
+                    <div class="aa-product-details-area ">
                         <div class="aa-product-details-content">
                             <div class="row">
 
@@ -14,7 +14,7 @@
                                         <div id="demo-1" class="simpleLens-gallery-container">
                                             <div class="simpleLens-container">
                                                 <div>          
-                                                    <img src="{{asset('assets/backend/uploads/images/product/'.$productDetails->image)}}"
+                                                    <img src="{{asset('backend/uploads/images/product/'.$productDetails->image)}}"
                                                          class="simpleLens-lens-image"></div>
                                             </div>
                                         </div>

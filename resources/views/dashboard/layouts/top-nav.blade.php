@@ -12,7 +12,7 @@
 
                         <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown"
                            aria-expanded="false">
-                            <img src="{{asset('assets/backend/uploads/images/doctor/'.Auth::guard('doctor')->user()->image)}}" alt="">
+                            <img src="{{asset('backend/uploads/images/doctor/'.Auth::guard('doctor')->user()->image)}}" alt="">
                             {{Auth::guard('doctor')->user()->name}}
                             <span class=" fa fa-angle-down"></span>
                         </a>

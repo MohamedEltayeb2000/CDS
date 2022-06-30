@@ -35,7 +35,7 @@
                                             <td>{{$admin->name}}</td>
                                             <td>{{$admin->email}}</td>
                                             <td>
-                                                <img src="{{url('public/backend/uploads/images/admin/'.$admin->image)}}" alt="INF" width="50">
+                                                <img src="{{asset('backend/uploads/images/admin/'.$admin->image)}}" alt="INF" width="50">
                                             </td>
                                             <td>{{$admin->created_at->diffForHumans()}}</td>
                                             <td>

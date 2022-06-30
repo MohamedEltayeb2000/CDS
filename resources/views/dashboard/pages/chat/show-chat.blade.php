@@ -57,7 +57,7 @@
 
                                                                     <div class="col-sm-3 col-xs-3 sideBar-avatar">
                                                                         <div class="avatar-icon">
-                                                                            <img src="{{url('public/backend/uploads/images/users/'.$doctor->image)}}">
+                                                                            <img src="{{asset('assets/backend/uploads/images/users/'.$doctor->image)}}">
                                                                         </div>
                                                                     </div>
                                                                     <div class="col-sm-9 col-xs-9 sideBar-main">

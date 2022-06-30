@@ -33,7 +33,7 @@
                                             <td>{{++$key}}</td>
                                             <td>{{substr($banner->title,0,50)}}</td>
                                             <td>
-                                                <img src="{{url('public/backend/uploads/images/banner/'.$banner->image)}}" alt="INF" width="50">
+                                                <img src="{{asset('assets/backend/uploads/images/banner/'.$banner->image)}}" alt="INF" width="50">
                                             </td>
                                             <td>{{$banner->created_at->diffForHumans()}}</td>
                                             <td>

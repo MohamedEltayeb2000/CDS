@@ -35,7 +35,7 @@
                                             <td>{{$hospital->name}}</td>
                                             <td>{{$hospital->email}}</td>
                                             <td>
-                                                <img src="{{url('public/backend/uploads/images/doctor/'.$hospital->image)}}" alt="INF" width="50">
+                                                <img src="{{asset('backend/uploads/images/doctor/'.$hospital->image)}}" alt="INF" width="50">
                                             </td>
                                             <td>{{$hospital->created_at->diffForHumans()}}</td>
                                     

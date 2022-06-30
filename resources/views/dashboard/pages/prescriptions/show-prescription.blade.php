@@ -23,6 +23,8 @@
                                         <th>S.n</th>
                                         <th>upload</th>
                                         <th>Created at</th>
+                                        <th>Name</th>
+                                       
                                         <th>Action</th>
                                     </tr>
                                     </thead>
@@ -33,12 +35,16 @@
                                             <td>
                                                 <a href="#" class="pan" data-big="{{url('public/backend/uploads/images/prescription/'.$prescription->upload)}}">
                                                     <img
-                                                         src="{{url('public/backend/uploads/images/prescription/'.$prescription->upload)}}"
+                                                         src="{{asset('backend/uploads/images/prescription/'.$prescription->upload)}}"
                                                          alt="INF" width="50">
                                                 </a>
                                             </td>
                                             <td>{{$prescription->created_at->diffForHumans()}}</td>
+                                            <td>{{$prescription->name}}</td>
+
+
                                             <td>
+
                                                 <a href="{{route('prescription-delete').'/'.$prescription->id}}"
                                                    onclick="return confirm('Are you sure?')"
                                                    class="btn btn-danger btn-xs">

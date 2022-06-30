@@ -21,7 +21,7 @@
                                               action="{{route('prescription-post')}}" enctype="multipart/form-data">
                                             @csrf
                                             <div class="row">
-                                                <div class="col-md-6">
+                                                <div class="col-md-12">
                                                     <div class="form-group">
                                                         <label>Name</label>
                                                         <input type="text" id="name" value="{{old('name')}}" name="name" placeholder="Your Name"
@@ -31,11 +31,11 @@
                                                 </div>
                                             </div>
                                             <div class="row">
-                                                <div class="col-md-6">
+                                                <div class="col-md-12">
                                                     <div class="form-group">
                                                         <label>Phone Number</label>
                                                         <input type="text"  id="number"
-                                                               value="{{old('number')}}" name="number"
+                                                                name="number"
                                                                placeholder="Number" class="form-control">
                                                         <a href="" style="color: red;">{{$errors->first('number')}}</a>
 
@@ -44,7 +44,7 @@
                                             </div>
 
                                             <div class="row">
-                                                <div class="col-md-6">
+                                                <div class="col-md-12">
                                                     <div class="form-group">
                                                         <label>Prescription Upload</label>
                                                         <input type="file" id="upload" name="upload"
