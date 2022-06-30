@@ -109,7 +109,7 @@
                             <div class="jobs_left d-flex align-items-center">
                                 <div >
 
-                                        <img  src="{{$row['image']}}" alt="" width="100" height="100">
+                                        <img  src="{{asset('backend/uploads/images/doctor/'.$row['image'])}}" alt="#" width="100" height="100">
 
                                 </div>
                                 <div class="jobs_conetent">
