@@ -63,8 +63,8 @@ class UserLoginController extends FrontendController
             $criteria = $request->criteria;
             $this->validate($request, [
                 'name' => 'required|min:3|max:50',
-                'username' => 'required|min:3|', [
-                    Rule::unique('users', 'username')->ignore($criteria)
+                 [
+                    Rule::unique('users', 'name')->ignore($criteria)
                 ],
                 'email' => 'required|email|', [
                     Rule::unique('users', 'email')->ignore($criteria)
@@ -76,7 +76,7 @@ class UserLoginController extends FrontendController
 
             $userObject = User::findOrFail($criteria);
             $userObject->name = $request->name;
-            $userObject->username = $request->username;
+         
             $userObject->email = $request->email;
 
             if ($request->hasFile('upload')) {

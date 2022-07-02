@@ -1,5 +1,62 @@
 @extends('frontend.master.master')
+<style>
+    #chat{
+	padding-left:0;
+	margin:0;
+	list-style-type:none;
+	overflow-y:scroll;
+	height:175px;
+	border-top:2px solid #fff;
+	border-bottom:2px solid #fff;
+}
+#chat li{
+	padding:10px 30px;
+}
+#chat h2,#chat h3{
+	display:inline-block;
+	font-size:13px;
+	font-weight:normal;
+}
+#chat h3{
+	color:#bbb;
+}
+#chat .entete{
+	margin-bottom:5px;
+}
+#chat .message{
+	padding:20px;
+	color:#fff;
+	
+	max-width:90%;
+	display:inline-block;
+	text-align:left;
+	border-radius:5px;
+}
+#chat .me{
+	text-align:right;
+}
+#chat .you .message{
+	background-color:#58b666;
+}
+#chat .me .message{
+	background-color:#6fbced;
+}
+#chat .triangle{
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 0 10px 10px 10px;
+}
+#chat .you .triangle{
+		border-color: transparent transparent #58b666 transparent;
+		margin-left:15px;
+}
+#chat .me .triangle{
+		border-color: transparent transparent #6fbced transparent;
+		margin-left:375px;
+}
 
+</style>
 @section('content')
 <div class="container">
     <div class="col-md-12">
@@ -10,7 +67,7 @@
                         <div class="row heading">
                             <div class="col-md-3 col-xs-3 heading-avatar">
                                 <div class="heading-avatar-icon">
-                                    <img src="{{asset('assets/backend/uploads/images/user/'.Auth::guard('web')->user()->image)}}">
+                                    <img src="{{asset('backend/uploads/images/user/'.Auth::guard('web')->user()->image)}}">
                                 </div>
 
                                 <br>
@@ -90,17 +147,71 @@
                     <div class="row heading">
                         <div class="col-sm-2 col-md-1 col-xs-3 heading-avatar">
                             <div class="heading-avatar-icon">
-                                <img src="https://bootdey.com/img/Content/avatar/avatar6.png">
+                                <img src="{{asset('assets/images/marwan.jpg')}}">
                             </div>
                         </div>
                         <div class="col-sm-8 col-xs-7 heading-name">
-                            <div id="doctor-name"></div>
+                            <div id="doctor-name">Moemn mostafa</div>
                         </div>
                         <div class="col-sm-1 col-xs-1  heading-dot pull-right">
                             <i class="fa fa-ellipsis-v fa-2x  pull-right" aria-hidden="true"></i>
                         </div>
                     </div>
-
+                    <ul id="chat">
+                        <li class="me">
+                            <div class="entete">
+                        
+                                <h2>Mahmoud ahmed </h2>
+                                <span class="status blue"></span>
+                            </div>
+                            <div class="triangle"></div>
+                            <div class="message">
+doctor moemn i have problem with lungs                            </div>
+                        </li>
+                        <li class="you">
+                            <div class="entete">
+                                <span class="status green"></span>
+                                <h2>Moemn mostafa</h2>
+                  
+                            </div>
+                            <div class="triangle"></div>
+                            <div class="message">
+how can i help you mahmoud                            </div>
+                        </li>
+                        <li class="me">
+                            <div class="entete">
+                        
+                                <h2>Mahmoud ahmed </h2>
+                                <span class="status blue"></span>
+                            </div>
+                            <div class="triangle"></div>
+                            <div class="message">
+                              okay dear  will contact you tonight
+                            </div>
+                        </li>
+                        <li class="you">
+                            <div class="entete">
+                                <span class="status green"></span>
+                                <h2>Moemn mostafa</h2>
+                       
+                            </div>
+                            <div class="triangle"></div>
+                            <div class="message">
+okay i waiting you                            </div>
+                        </li>
+                        <li class="me">
+                            <div class="entete">
+                              
+                                <h2>Mahmoud ahmed </h2>
+                                <span class="status blue"></span>
+                            </div>
+                            <div class="triangle"></div>
+                            <div class="message">
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+                            </div>
+                        </li>
+                    
+                    </ul>
                     <div class="row reply">
         
                         <div class="col-sm-9 col-xs-9 reply-main">

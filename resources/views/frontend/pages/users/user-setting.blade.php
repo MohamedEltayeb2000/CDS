@@ -48,7 +48,7 @@
 
                                 </div>
                                 <div class="col-md-4">
-                                    <img src="{{asset('assets/backend/uploads/images/user/'.$userData->image)}}" alt=""
+                                    <img src="{{asset('backend/uploads/images/user/'.$userData->image)}}" alt=""
                                          class="img-responsive thumbnail" style="margin-top: 23px;">
                                 </div>
 
